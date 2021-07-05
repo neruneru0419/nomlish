@@ -16,7 +16,7 @@ from Ruby.
 EOS
   spec.homepage      = "https://github.com/neruneru0419/nomlish"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
 
   # Specify which files should be added to the gem when it is released.

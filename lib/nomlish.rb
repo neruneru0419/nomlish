@@ -4,6 +4,7 @@ module Nomlish
   def self.translate(text, level = 2, option = "normal")
     nomlish_url = 'https://racing-lagoon.info/nomu/translate.php'
     agent = Mechanize.new
+    
     page = agent.get(nomlish_url)
     form = page.forms[0]
     form.field_with(:name=>"before").value = text
