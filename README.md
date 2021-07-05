@@ -1,6 +1,7 @@
 # Nomlish
 
 This library makes it possible to handle "Nomlish Translation", a service that translates Japanese in a Final Fantasy style, from Ruby.
+https://racing-lagoon.info/
 
 ## Installation
 
@@ -43,7 +44,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nomlish.
+Bug reports and pull requests are welcome on GitHub at https://github.com//nomlish.
 
 ## License
 
