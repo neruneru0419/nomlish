@@ -12,7 +12,7 @@ module Nomlish
     button = form.button_with(name: 'transbtn')
     
     result_form = agent.submit(form, button)
-    result_form.forms[0].field_with(:name=>"after1").value
+    result_form.forms[0].field_with(:name=>"after1").value.gsub(/[\r\n]/,"")
   end
 
 
