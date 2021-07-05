@@ -1,7 +1,7 @@
 require_relative "nomlish/version"
 require "mechanize"
 module Nomlish
-  def self.translate(text, level = 2, option = "nochk")
+  def self.translate(text, level = 2, option = "normal")
     nomlish_url = 'https://racing-lagoon.info/nomu/translate.php'
     agent = Mechanize.new
     page = agent.get(nomlish_url)
@@ -15,16 +15,17 @@ module Nomlish
     result_form.forms[0].field_with(:name=>"after1").value.gsub(/[\r\n]/,"")
   end
 
-
   def self.set_level(level)
     0 < level && level < 6 ? level : 2
   end
 
   def self.set_auto_completion(option)
     case option
-    when "without" then
+    when "normal" then #普通に翻訳
+      "nochk"
+    when "without" then #自動補完を使わず翻訳
       "p0chk"
-    when "only" then
+    when "only" then #自動補完のみで翻訳
       "p100chk"
     else
       "nochk"
